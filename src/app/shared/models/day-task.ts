@@ -1,8 +1,8 @@
 import { IDayTask } from './interfaces/iday-task';
-import { ITask } from './interfaces/itask';
+import { Task } from './task';
 
 export class DayTask implements IDayTask {
   date = new Date();
   isCurrentMonth = false;
-  tasks: ITask[] = [];
+  tasks: Task[] = [];
 }
