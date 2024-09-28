@@ -1,0 +1,5 @@
+<div class="task-bar">
+  @for (task of tasks; track $index) {
+  <div [style]="{'width': task.duration + '%', 'background-color': task.projectColor}" class="h-full rounded-lg"></div>
+  }
+</div>

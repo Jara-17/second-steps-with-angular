@@ -1,0 +1,59 @@
+<div class="modal__container">
+  <div class="modal__content">
+    <div class="content__container">
+      <div class="content__header">
+        <h1 class="content__header-title">Añadir nueva tarea</h1>
+
+        <button (click)="closeModal()" class="content__header-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
+            <path fill="currentColor" fill-rule="evenodd"
+              d="M4.28 3.22a.75.75 0 0 0-1.06 1.06L6.94 8l-3.72 3.72a.75.75 0 1 0 1.06 1.06L8 9.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L9.06 8l3.72-3.72a.75.75 0 0 0-1.06-1.06L8 6.94L4.28 3.22Z"
+              clip-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
+
+      <form [formGroup]="mForm" (ngSubmit)="onSubmit()" class="form">
+        <div class="form__group">
+          <label for="project">Proyecto</label>
+          <input formControlName="project" class="form__input" type="text" id="project"
+            placeholder="Nombre del proyecto">
+        </div>
+
+        <div class="form__group">
+          <label for="color">Color asignado al proyecto</label>
+          <input formControlName="color" class="form__input-color" type="color" id="color">
+        </div>
+
+        <div class="form__group">
+          <label for="task">Tarea</label>
+          <input formControlName="title" class="form__input" type="text" id="task" placeholder="Tarea realizada">
+        </div>
+
+        <div class="form__group">
+          <label for="info">Descripción</label>
+          <textarea formControlName="info" class="form__input" type="text" id="info"
+            placeholder="Más información sobre la tarea"></textarea>
+        </div>
+
+        <div class="form__group">
+          <div class="flex flex-col">
+            <label for="start">Inicio</label>
+            <input formControlName="start" id="start" class="form__input" type="time">
+          </div>
+          <div class="flex flex-col">
+            <label for="time">Duración (minutos)</label>
+            <input formControlName="duration" id="time" class="form__input" type="number">
+          </div>
+        </div>
+
+        <div class="form__footer">
+          <p class="font-medium text-lg">4h 50min</p>
+          <p class="text-sm text-slate-700">Finalización el 12 de septiembre a las 15:56</p>
+        </div>
+
+        <button type="submit" class="form__button">Guardar</button>
+      </form>
+    </div>
+  </div>
+</div>

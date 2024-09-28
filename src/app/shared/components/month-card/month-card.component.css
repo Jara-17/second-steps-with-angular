@@ -1,0 +1,7 @@
+.calendar {
+  @apply my-10 flex flex-col gap-y-4;
+}
+
+.week {
+  @apply flex flex-row gap-4 mx-auto;
+}

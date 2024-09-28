@@ -1,0 +1,9 @@
+<div class="calendar">
+  @for (week of weeks; track $index) {
+  <div class="week">
+    @for (day of week; track $index) {
+    <block-item [day]="day" />
+    }
+  </div>
+  }
+</div>

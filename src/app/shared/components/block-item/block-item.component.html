@@ -1,0 +1,15 @@
+<div class="relative">
+  @if (day && day.isCurrentMonth) {
+  <div [ngClass]="day.tasks.length | taskColor" class="day" (mouseenter)="showTooltip()" (mouseleave)="hideTooltip()"
+    (click)="detail()"></div>
+
+  <div class="tooltip" [ngClass]="{
+        'opacity-0 pointer-events-none invisible': !isTooltipVisible,
+        'opacity-100 pointer-events-auto visible': isTooltipVisible
+      }">
+    <p>{{day.date | date }}</p>
+  </div>
+  } @else {
+  <div class="w-10 h-10"></div>
+  }
+</div>

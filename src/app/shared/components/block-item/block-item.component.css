@@ -1,0 +1,7 @@
+.day {
+  @apply bg-slate-200 border-2 border-slate-300 transition-all cursor-pointer w-10 h-10 rounded-lg;
+}
+
+.tooltip {
+  @apply absolute left-1/2 -translate-x-1/2 bottom-full mb-2 px-2 py-1 bg-slate-800 text-white text-sm rounded-lg transition-all duration-300 whitespace-nowrap;
+}

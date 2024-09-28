@@ -1,0 +1,19 @@
+<section class="list__container">
+
+  <div class="list__header">
+    <p class="col-span-3">Tarea</p>
+    <p class="col-span-1">Duración</p>
+  </div>
+
+  @for (task of tasks; track $index) {
+  <div class="list__item">
+    <p class="list__item-title">
+      <span [style]="{'background-color': task.projectColor}" class="list__item-color">
+      </span>
+      {{task.title}}
+    </p>
+
+    <p class="list__item-duration">{{task.duration}} min</p>
+  </div>
+  }
+</section>

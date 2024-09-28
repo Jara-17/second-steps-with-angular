@@ -1,0 +1,15 @@
+<main class="detail__container">
+  <div class="detail__header">
+    <h1 class="detail__title">{{date | date: 'longDate'}}</h1>
+
+    <button class="detail__add-button" (click)="displayAddView()">Añadir
+    </button>
+  </div>
+
+  <task-bar [tasks]="tasks" />
+
+  <task-list [tasks]="tasks" />
+
+  @if (showAddTask && date) {<add-task (close)="displayAddView()" [selectedDate]="date" />}
+
+</main>

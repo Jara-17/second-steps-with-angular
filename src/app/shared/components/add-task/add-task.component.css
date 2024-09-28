@@ -1,0 +1,47 @@
+.modal__container {
+  @apply bg-slate-900/80 fixed left-0 top-0 z-40 h-full w-full overflow-y-auto overflow-x-hidden outline-none;
+}
+
+.modal__content {
+  @apply relative transition-all duration-300 z-50 ease-in-out max-w-screen-sm mx-auto py-16 p-4 transform-none opacity-100;
+}
+
+.content__container {
+  @apply flex flex-col p-6 bg-white rounded-xl shadow-md;
+}
+
+.content__header {
+  @apply flex justify-between items-baseline;
+}
+
+.content__header-title {
+  @apply font-medium text-lg mb-3;
+}
+
+.content__header-close {
+  @apply flex items-center justify-center bg-slate-100 rounded-xl p-1 transition-all hover:bg-slate-200;
+}
+
+.form {
+  @apply flex flex-col gap-y-3 pb-2 px-2 pt-6 border-t;
+}
+
+.form__group {
+  @apply flex flex-col gap-2;
+}
+
+.form__input {
+  @apply border border-slate-300 rounded-lg p-2;
+}
+
+.form__input-color {
+  @apply p-1 h-10 w-14 block bg-white border border-gray-200 cursor-pointer rounded-lg disabled:opacity-50 disabled:pointer-events-none;
+}
+
+.form__footer {
+  @apply text-center bg-slate-50 rounded-xl p-4;
+}
+
+.form__button {
+  @apply bg-blue-600 text-white rounded-lg p-4 mt-4 transition-all hover:bg-blue-800;
+}
