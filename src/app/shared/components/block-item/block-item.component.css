@@ -1,5 +1,5 @@
 .day {
-  @apply bg-slate-200 border-2 border-slate-300 transition-all cursor-pointer w-10 h-10 rounded-lg;
+  @apply border-2 transition-all cursor-pointer w-10 h-10 rounded-lg;
 }
 
 .tooltip {
